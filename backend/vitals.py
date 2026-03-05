@@ -14,7 +14,7 @@ from models import Patient, Vital
 from auth import get_current_patient
 
 # Add ml-service to path for predictions
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "ml-service"))
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), "ml-service"))
 
 router = APIRouter(prefix="/vitals", tags=["Vitals"])
 
