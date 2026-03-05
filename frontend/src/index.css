@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background: #f5f7fb;
+  color: #1e293b;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Glass morphism card */
+.glass-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Risk color animations */
+.risk-stable { color: #10b981; }
+.risk-inflammation { color: #f59e0b; }
+.risk-cardiac { color: #f97316; }
+.risk-respiratory { color: #ef4444; }
+.risk-critical { color: #dc2626; }
+
+.risk-bg-stable { background: linear-gradient(135deg, #10b981, #34d399); }
+.risk-bg-inflammation { background: linear-gradient(135deg, #f59e0b, #fbbf24); }
+.risk-bg-cardiac { background: linear-gradient(135deg, #f97316, #fb923c); }
+.risk-bg-respiratory { background: linear-gradient(135deg, #ef4444, #f87171); }
+.risk-bg-critical { background: linear-gradient(135deg, #dc2626, #ef4444); }
+
+/* Pulse animation for critical alerts */
+@keyframes criticalPulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.4); }
+  50% { box-shadow: 0 0 0 12px rgba(220, 38, 38, 0); }
+}
+.critical-pulse {
+  animation: criticalPulse 2s infinite;
+}
+
+/* Input focus ring */
+input:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+}
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
