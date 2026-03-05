@@ -13,9 +13,6 @@ ml-service/trend_dataset.csv
 node_modules/
 frontend/dist/
 
-# Backend static (built files)
-backend/static/
-
 # IDE
 .vscode/
 .idea/
